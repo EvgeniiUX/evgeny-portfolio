@@ -12,12 +12,15 @@
     --container: 1240px;
     --transition:cubic-bezier(.22,1,.36,1);
 }
+
 * {
     box-sizing:border-box;
 }
+
 html {
     scroll-behavior:smooth;
 }
+
 body {
     margin:0;
     background:var(--background);
@@ -27,19 +30,24 @@ body {
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
 }
+
 img {
     max-width:100%;
     display:block;
 }
+
 a {
     color:inherit;
     text-decoration:none;
 }
+
 .container {
     width:min(calc(100% - 64px),var(--container));
     margin:auto;
 }
+
 /* =====================================HEADER===================================== */
+
 .site-header {
     position:fixed;
     top:0;
@@ -58,6 +66,7 @@ a {
 }
 
 /* =============== LOGO =============== */
+
 .logo{
     display:flex;
     align-items:center;
@@ -66,7 +75,6 @@ a {
     font-size:20px;
     letter-spacing:-0.03em;
 }
-
 .logo-avatar{
     width:42px;
     height:42px;
@@ -77,19 +85,15 @@ a {
     border:1px solid var(--border);
 
 }
-
 .logo-avatar img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
 }
-
 .logo-text{
     line-height:1;
 }
-
-
 .navigation {
     display:flex;
     gap:36px;
@@ -98,7 +102,6 @@ a {
     color:var(--text-secondary);
     font-size:15px;
 }
-
 .eyebrow {
     margin-top: 7rem;
 }
@@ -118,7 +121,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 28px;
+    padding: 0.5rem 1rem;
     border-radius: 999px;
     font-size: 16px;
     font-weight: 600;
@@ -131,45 +134,39 @@ a {
         transform .25s ease,
         box-shadow .25s ease;
 }
-
 .button:hover {
     transform: translateY(-2px);
 }
 
 /* Primary */
-
 .button-primary {
     background: #4361ee;
     color: #fff;
     border: 1px solid #4361ee;
 }
-
 .button-primary:hover {
     background: #222;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Secondary */
-
 .button-secondary {
     background: #4361ee;
     color: #fff;
     border: 1px solid var(--border);
 }
-
 .button-secondary:hover {
     background: #f6f6f6;
     border-color: #d9d9d9;
 }
-
 .project-card {
     margin-bottom: 2rem;
 }
-
 .project-category {
     color: grey;
 }
-    /* =================== CASE STUDY =================== */
+
+/* =================== CASE STUDY =================== */
 .overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .case-image{height:700px;border-radius:36px;background:#f3f3f1;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700;letter-spacing:-.05em}
 .case-content{max-width:850px}
