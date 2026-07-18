@@ -57,7 +57,7 @@ a {
     justify-content:space-between;
 }
 
-/* ---- LOGO ----*/
+/* =============== LOGO =============== */
 .logo{
     display:flex;
     align-items:center;
@@ -75,7 +75,7 @@ a {
     flex-shrink:0;
     background:#ececec;
     border:1px solid var(--border);
-    opacity: 0;
+
 }
 
 .logo-avatar img{
