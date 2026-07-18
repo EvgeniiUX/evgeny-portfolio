@@ -64,34 +64,15 @@ a {
     display:flex;
     align-items:center;
     justify-content:space-between;*/
-    
+
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 2rem;
 }
 
-@media (max-width: 768px) {
 
-    .header-inner {
-        height:72px;
-    }
-
-    .navigation {
-        display:none;
-    }
-
-    .logo-avatar {
-        width:36px;
-        height:36px;
-    }
-
-    .logo-text {
-        font-size:18px;
-    }
-
-}
 
 /* =============== LOGO =============== */
 
@@ -136,6 +117,12 @@ a {
 
 /* ========= HERO =========== */
 /* ============ Hero Actions ================ */
+
+.hero h1 {
+    font-size: 2em;
+    line-height: 1.27;
+    font-weight: normal;
+}
 
 .hero-actions {
     display: flex;
