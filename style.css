@@ -60,10 +60,16 @@ a {
     border-bottom:1px solid var(--border);
 }
 .header-inner {
-    height:80px;
+    /*height:80px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-between;*/
+    
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
 }
 
 @media (max-width: 768px) {
