@@ -6,15 +6,52 @@
   <title>Evgeny Perepechko — Product & UX Portfolio</title>
   <meta name="description" content="Product Owner and UX Leader portfolio. Digital products, design systems, e-commerce optimization and experimentation.">
   <link rel="stylesheet" href="style.css">
+<style>
+    .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:-0.03em;
+}
+
+.logo-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+    background:#ececec;
+    border:1px solid var(--border);
+}
+
+.logo-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.logo-text{
+    line-height:1;
+}
+</style>
 </head>
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- ========================= HEADER ========================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">EP</a>
+      <a href="/" class="logo">
+    <div class="logo-avatar">
+        <img src="assets/images/avatar.jpg" alt="Logo">
+    </div>
+    <span class="logo-text">
+        Evgeny Sobolev
+    </span>
+
+</a>
       <nav class="navigation">
         <a href="#work">Case Studies</a>
         <a href="#about">About</a>
@@ -99,9 +136,9 @@
 
     <!-- ========================= EXPERIENCE ========================= -->
     <section class="section section-dark">
-       
+        
       <div class="container">
-         <h2>Experience</h2>
+        <h2>Experience</h2>
         <div class="metrics-grid">
           <div class="metric-card">
             <strong>15+</strong>
@@ -140,8 +177,8 @@
     <!-- ========================= CONTACT ========================= -->
     <section id="contact" class="section contact">
       <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's build better products.</h2>
+        <h2>Contact</h2>
+        <h3>Let's build better products.</h3>
         <a href="mailto:your-email@example.com" class="button button-primary">Get in touch</a>
       </div>
     </section>
