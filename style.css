@@ -431,19 +431,20 @@ a {
 /* ========== SOLUTION GRID =========== */
 
 .solution-grid {
-	display: flex;
-	/* grid-template-columns: repeat(3, 1fr); */
+	display:flex;
     flex-direction: column;
-	gap: 1rem;
-	margin-top: 1rem;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:20px;
 }
 
-.solution-card p {
+
+
+.solution-grid .solution-card h3, .solution-grid .solution-card p {
     margin:0;
 }
-.solution-card p {
-    margin:0;
-}
+
+
 /*
 
 .solution-card {
