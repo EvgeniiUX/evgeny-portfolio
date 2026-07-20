@@ -11,6 +11,7 @@
     --radius-lg: 36px;
     --container: 1240px;
     --transition:cubic-bezier(.22,1,.36,1);
+    --text-highlight: #5e0fdc;
 }
 
 * {
@@ -49,9 +50,20 @@ a {
     text-decoration:none;
 }
 
+
+ul, ol {
+    padding-inline-start: 25px;
+}
+
 .container {
     width:min(calc(100% - 64px),var(--container));
     margin:auto;
+}
+
+
+.text-highlight {
+    font-weight: bold;
+    color: var(--text-highlight);
 }
 
 
@@ -186,9 +198,7 @@ a {
     gap: 8px;
 
 }
-.project-category {
-    color: grey;
-}
+
 
 /* ========================= PROJECT CONTENT ========================= */
 
@@ -201,12 +211,29 @@ a {
 }
 
 .project-category{
-    /*margin:0;*/
+    /*margin:0;
     font-size:13px;
-    font-weight:600;
+    font-weight:600;*/
     letter-spacing:.08em;
     text-transform:uppercase;
     color:var(--text-secondary);
+
+
+    font-family: 'Geist Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    /* color: var(--color-gradient-purple); */
+    font-weight: 400;
+    /* background-color: #5e0fdc; */
+    padding: 2px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .project-content h3{
@@ -236,6 +263,15 @@ a {
     letter-spacing: .08em;
     text-transform: uppercase;
 }
+.project-result::before{
+    content:"↓";
+    font-size:15px;
+    font-weight:700;
+    color:var(--text);
+    position: relative;
+    left: -7px;
+
+}
 
 .project-link{
     display:inline-flex;
@@ -259,11 +295,6 @@ a {
 }
 
 /*
-.project-link:hover{
-    background:#f7f7f7;
-    border-color:#d8d8d8;
-    transform:translateY(-2px);
-}*/
 
 /* ========================= EXPERIENCE HIGHLIGHTS ========================= */
 
@@ -291,10 +322,6 @@ a {
         border-color .25s ease;
 }
 
-.metric-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 16px 40px rgba(0,0,0,.08);
-}
 
 .metric-card strong{
     display:block;
@@ -330,43 +357,33 @@ a {
 
 .case-title {
     line-height: 1.25;
+    margin-top: 0.5rem;
 }
 
 .case-meta{
     display:flex;
     flex-wrap:wrap;
-    gap:20px;
-    padding-top:32px;
+    gap:15px;
     /*border-top:1px solid var(--border);*/
 }
 
 
 .meta-card{
     flex:1 1 220px;
-
     display:flex;
     flex-direction:column;
     gap:10px;
+    padding:10px;
 
-    padding:24px;
-
-    background:#f7f7f5;
-
+   /* background:#f7f7f5;
     border:1px solid var(--border);
     border-radius:20px;
-
     transition:
         transform .25s ease,
-        box-shadow .25s ease;
+        box-shadow .25s ease;*/
 }
 
 
-.meta-card:hover{
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.06);
-}
 
 
 .meta-card span{
@@ -476,7 +493,7 @@ a {
 .eyebrow-case {
     margin-top: 3rem;
     margin-bottom: 0;
-    color: #5e0fdc;
+    color: var(--text-highlight);
 }
 
 .case-block h2 {
@@ -515,12 +532,6 @@ a {
         border-color .3s ease;
 }
 
-.research-card:hover{
-    transform:translateY(-4px);
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.08);
-    border-color:rgba(0,0,0,.15);
-}
 
 .research-card h3{
     margin:0 0 12px;
@@ -542,64 +553,43 @@ a {
    PROCESS LIST
 ========================= */
 
-ol{
+ol.process{
     list-style:none;
     counter-reset:step;
-
     display:flex;
     flex-direction:column;
     gap:16px;
-
     margin:40px 0 0;
     padding:0;
 }
 
-ol li{
+ol.process li{
     counter-increment:step;
-
     display:flex;
     align-items:center;
     gap:20px;
-
     padding:20px 24px;
-
     border:1px solid var(--border);
     border-radius:20px;
-
     background:#fff;
-
     transition:
         transform .25s ease,
         box-shadow .25s ease,
         border-color .25s ease;
-}
+    }
 
-ol li::before{
+ol.process li::before{
     content:counter(step);
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     width:36px;
     height:36px;
-
     flex-shrink:0;
-
+    border: 1px solid grey;
     border-radius:50%;
-
-    background:#111;
-    color:#fff;
-
+    background:#fff;
+    color:#000;
     font-size:15px;
     font-weight:700;
 }
-
-ol li:hover{
-    transform:translateY(-2px);
-
-    border-color:rgba(0,0,0,.15);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
