@@ -141,12 +141,33 @@ ul, ol {
 
 
 /* ========= HERO =========== */
+
+
+
 /* ============ Hero Actions ================ */
 
 .hero h1 {
-    font-size: 2em;
-    line-height: 1.27;
+    font-size: 1.5em;
+    line-height: 1.25;
     font-weight: normal;
+}
+
+
+.hero-title {
+    font-size: clamp(3.5rem, 9vw, 6.5rem); /* 56px → 104px */
+    line-height: 0.9;
+    margin: 1.8em 0 0.3em;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+}
+
+.hero-title span {
+    display: block;
+    color: #d4d8e1;
+}
+
+.hero-tags {
+    font-size: 18px;
 }
 
 .hero-actions {
@@ -192,7 +213,51 @@ ul, ol {
     border: 1px solid var(--border);
 }
 
+/* ======= COMPANIES ============= */
+
+.companies{
+        border-top :1px solid var(--border);
+        /*border-bottom :1px solid var(--border);*/
+        margin:0 0;
+        margin-top:2em;
+        padding-top:1em;
+        padding-bottom:1em;
+}
+ .companies p{
+     font-size:12px;
+     letter-spacing:2px;
+     color:#d1d6df;
+     font-weight:700;
+     margin-bottom:5px;
+}
+
+ .companies div{
+    display:flex;
+    gap:clamp(20px, 4vw, 50px);
+
+    font-weight:800;
+    color:#d1d6df;
+}
+
+.companies span{
+    font-size:clamp(1.75rem, 4vw, 3.5rem);
+    letter-spacing:-0.03em;
+    font-weight:800;
+    line-height:1;
+    white-space:nowrap;
+}
+
+
 /* ========================= PROJECT CARDS ========================= */
+
+#work {
+    background-color: #d4d8e12e;
+}
+
+#work h2 {
+    margin: 0;
+    padding: 1.5em 0 0 0;
+}
 
 .project-card {
    /* margin-bottom: 2rem;*/
@@ -249,7 +314,7 @@ ul, ol {
 
 .project-text{
     margin:0;
-    font-size:17px;
+    font-size:18px;
     line-height:1.6;
     color:var(--text-secondary);
 }
@@ -277,6 +342,10 @@ ul, ol {
 
 }
 
+div.up.project-result::before {
+    content: "↗";
+}
+
 .project-link{
     display:inline-flex;
     align-items:center;
@@ -288,14 +357,15 @@ ul, ol {
     background:#fff;
     font-size:15px;
     font-weight:600;
-    transition:
-        background .25s ease,
-        border-color .25s ease,
-        transform .25s ease;
-        }
+    text-transform: capitalize;
+}
 
 .project-link::after{
     content:"→";
+}
+
+a.about.project-link::after{
+    content: "↓";
 }
 
 /*
