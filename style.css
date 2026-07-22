@@ -261,6 +261,36 @@ ul, ol {
     white-space:nowrap;
 }
 
+/* --- Portrait ---*/
+
+.portrait img {
+    width: 100%;
+    height: auto;
+
+}
+
+#hero .container {
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    gap: 80px;
+    /*padding: 80px 44px 100px;*/
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    #hero .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    
+    }
+    
+    .portrait img {
+        /*max-width: 50%;*/
+        margin: 0 auto 2em auto;
+    }
+
+}
+
 
 /* ========================= PROJECT CARDS ========================= */
 
