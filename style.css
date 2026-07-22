@@ -40,10 +40,23 @@ p {
     margin: 0;
 }
 
+/* === RESPONSIVE BREAKPOINTS ===*/
 @media (min-width:1024px){
 
     .case-block p.section-intro{
         margin-top:0;
+    }
+
+    h2.hero-title {
+        margin: 1em 0 0.3em;
+    }
+
+    .hero h1 {
+        width: 80%;
+    }
+
+    div.companies {
+        margin-bottom: 1em;
     }
 
 }
@@ -103,7 +116,7 @@ ul, ol {
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
     font-weight:700;
     font-size:20px;
     letter-spacing:-0.03em;
@@ -216,12 +229,13 @@ ul, ol {
 /* ======= COMPANIES ============= */
 
 .companies{
-        border-top :1px solid var(--border);
+        /*border-top :1px solid var(--border); */
         /*border-bottom :1px solid var(--border);*/
         margin:0 0;
         margin-top:2em;
         padding-top:1em;
         padding-bottom:1em;
+        margin-bottom: 1em;
 }
  .companies p{
      font-size:12px;
@@ -234,7 +248,7 @@ ul, ol {
  .companies div{
     display:flex;
     gap:clamp(20px, 4vw, 50px);
-
+    flex-wrap: wrap;
     font-weight:800;
     color:#d1d6df;
 }
@@ -257,6 +271,10 @@ ul, ol {
 #work h2 {
     margin: 0;
     padding: 1.5em 0 0 0;
+}
+
+#work .eyebrow-case {
+
 }
 
 .project-card {
@@ -307,7 +325,7 @@ ul, ol {
 
 .project-content h3{
     margin:0;
-    font-size:1.25em;
+    font-size:1.17em;
     line-height:1.1;
     letter-spacing:-.04em;
 }
@@ -371,6 +389,15 @@ a.about.project-link::after{
 /*
 
 /* ========================= EXPERIENCE HIGHLIGHTS ========================= */
+
+#about .eyebrow-case {
+    margin:0;
+    
+}
+
+#about h2 {
+    margin:0;
+}
 
 .metrics-grid{
     display:flex;
